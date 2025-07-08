@@ -1,0 +1,32 @@
+{
+  "1719272430": {
+    "user_id": 1719272430,
+    "full_name": "Ibragimov",
+    "phone_number": "15632757597",
+    "username": null,
+    "language": "ru",
+    "registration_time": "2025-07-08T12:41:33.283170",
+    "api_response_status": 400,
+    "api_response_text": "{\"error\":\"Phone number already registered\"}"
+  },
+  "1066137436": {
+    "user_id": 1066137436,
+    "full_name": "ㅤㅤㅤㅤㅤㅤ",
+    "phone_number": "998770451117",
+    "username": "uzjoylar_admin",
+    "language": "ru",
+    "registration_time": "2025-07-08T12:50:47.821269",
+    "api_response_status": 400,
+    "api_response_text": "{\"error\":\"Phone number already registered\"}"
+  },
+  "2035961569": {
+    "user_id": 2035961569,
+    "full_name": "Акбаршох",
+    "phone_number": "998883951601",
+    "username": null,
+    "language": "uz",
+    "registration_time": "2025-07-08T13:18:03.029378",
+    "api_response_status": 200,
+    "api_response_text": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5OTg4ODM5NTE2MDEiLCJyb2xlIjoidXNlciIsInVzZXJfaWQiOiJ1c2VyXzdhZDNhMmJiIiwiZXhwIjoxNzUyMDQ5MDgzfQ.t-ZapCCY5tiKxpcp592uZ2cxiCLwO-LJ__DgM_ZtyBk\",\"role\":\"user\",\"user_id\":\"user_7ad3a2bb\",\"language\":\"uz\"}"
+  }
+}

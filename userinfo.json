@@ -1,0 +1,41 @@
+[
+  {
+    "user_id": 1066137436,
+    "username": "uzjoylar_admin",
+    "first_name": "ㅤㅤㅤㅤㅤㅤ",
+    "last_name": null,
+    "full_name": "ㅤㅤㅤㅤㅤㅤ",
+    "language_code": "en",
+    "is_bot": false,
+    "is_premium": null,
+    "table_id": null,
+    "start_time": "2025-07-07T18:09:54.251942",
+    "start_command": "/start"
+  },
+  {
+    "user_id": 1719272430,
+    "username": "samandarik44",
+    "first_name": "Ibragimov",
+    "last_name": null,
+    "full_name": "Ibragimov",
+    "language_code": "en",
+    "is_bot": false,
+    "is_premium": null,
+    "table_id": null,
+    "start_time": "2025-07-07T18:10:24.076800",
+    "start_command": "/start"
+  },
+  {
+    "user_id": 1206569715,
+    "username": "Sharif_17",
+    "first_name": "𝓼𝓱𝓪𝓻𝓲𝓯",
+    "last_name": null,
+    "full_name": "𝓼𝓱𝓪𝓻𝓲𝓯",
+    "language_code": "en",
+    "is_bot": false,
+    "is_premium": null,
+    "table_id": null,
+    "start_time": "2025-07-07T18:39:37.734797",
+    "start_command": "/start"
+  }
+]
