@@ -9,16 +9,6 @@
     "api_response_status": 400,
     "api_response_text": "{\"error\":\"Phone number already registered\"}"
   },
-  "1066137436": {
-    "user_id": 1066137436,
-    "full_name": "ㅤㅤㅤㅤㅤㅤ",
-    "phone_number": "998770451117",
-    "username": "uzjoylar_admin",
-    "language": "ru",
-    "registration_time": "2025-07-08T12:50:47.821269",
-    "api_response_status": 400,
-    "api_response_text": "{\"error\":\"Phone number already registered\"}"
-  },
   "2035961569": {
     "user_id": 2035961569,
     "full_name": "Акбаршох",
@@ -28,5 +18,55 @@
     "registration_time": "2025-07-08T13:18:03.029378",
     "api_response_status": 200,
     "api_response_text": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5OTg4ODM5NTE2MDEiLCJyb2xlIjoidXNlciIsInVzZXJfaWQiOiJ1c2VyXzdhZDNhMmJiIiwiZXhwIjoxNzUyMDQ5MDgzfQ.t-ZapCCY5tiKxpcp592uZ2cxiCLwO-LJ__DgM_ZtyBk\",\"role\":\"user\",\"user_id\":\"user_7ad3a2bb\",\"language\":\"uz\"}"
+  },
+  "1786602824": {
+    "user_id": 1786602824,
+    "full_name": "1.Abdunumonov",
+    "phone_number": "998330110095",
+    "username": "Dalerr_7",
+    "language": "uz",
+    "registration_time": "2025-07-08T19:10:14.649315",
+    "api_response_status": 200,
+    "api_response_text": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5OTgzMzAxMTAwOTUiLCJyb2xlIjoidXNlciIsInVzZXJfaWQiOiJ1c2VyX2FmYTAwMWVkIiwiZXhwIjo1MzUxOTgwMjE0fQ.p0XMum_P5glTbKqbKna39DnayemQP5MOgoJHfQrQJVE\",\"role\":\"user\",\"user_id\":\"user_afa001ed\",\"language\":\"ru\"}"
+  },
+  "307658200": {
+    "user_id": 307658200,
+    "full_name": "Azim909",
+    "phone_number": "998973943399",
+    "username": "Azim_909",
+    "language": "ru",
+    "registration_time": "2025-07-08T23:01:04.100591",
+    "api_response_status": 200,
+    "api_response_text": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5OTg5NzM5NDMzOTkiLCJyb2xlIjoidXNlciIsInVzZXJfaWQiOiJ1c2VyX2EwZmRlODEyIiwiZXhwIjo1MzUxOTk0MDY0fQ.20FwC94XPxFGuBoVeUscCwEgKl7LX3OmpGNOyc25i_Y\",\"role\":\"user\",\"user_id\":\"user_a0fde812\",\"language\":\"ru\"}"
+  },
+  "6484977226": {
+    "user_id": 6484977226,
+    "full_name": "Muhammad",
+    "phone_number": "998939487570",
+    "username": "AZB_100",
+    "language": "ru",
+    "registration_time": "2025-07-09T00:08:05.978466",
+    "api_response_status": 200,
+    "api_response_text": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5OTg5Mzk0ODc1NzAiLCJyb2xlIjoidXNlciIsInVzZXJfaWQiOiJ1c2VyX2VkNDA2YWJmIiwiZXhwIjo1MzUxOTk4MDg2fQ.MerBk9yWX89TvZ0rPJaQwX-awqTr2NIIKLqbmXZn-6s\",\"role\":\"user\",\"user_id\":\"user_ed406abf\",\"language\":\"ru\"}"
+  },
+  "7715022945": {
+    "user_id": 7715022945,
+    "full_name": "🐊 Asad🐊",
+    "phone_number": "998889900025",
+    "username": null,
+    "language": "uz",
+    "registration_time": "2025-07-09T00:13:25.078108",
+    "api_response_status": 200,
+    "api_response_text": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5OTg4ODk5MDAwMjUiLCJyb2xlIjoidXNlciIsInVzZXJfaWQiOiJ1c2VyXzcwNDEwYjA3IiwiZXhwIjo1MzUxOTk4NDA1fQ.bXUiNUwn2OwlRUM24x7d9Aj3-QB60RZEV0c8aYy1rNc\",\"role\":\"user\",\"user_id\":\"user_70410b07\",\"language\":\"ru\"}"
+  },
+  "1066137436": {
+    "user_id": 1066137436,
+    "full_name": "ㅤㅤㅤㅤㅤㅤ",
+    "phone_number": "998770451117",
+    "username": "uzjoylar_admin",
+    "language": "ru",
+    "registration_time": "2025-07-10T18:03:28.393003",
+    "api_response_status": 200,
+    "api_response_text": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5OTg3NzA0NTExMTciLCJyb2xlIjoidXNlciIsInVzZXJfaWQiOiJ1c2VyXzQ5MWM2M2IxIiwiZXhwIjo1MzUyMTQ5MDA4fQ.VY1mTHCgN0XH0dFWhMYYdwiOD48EE7L4OoNTWCBRWWQ\",\"role\":\"user\",\"user_id\":\"user_491c63b1\",\"language\":\"ru\"}"
   }
 }

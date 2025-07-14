@@ -14,6 +14,9 @@ from aiogram.fsm.storage.memory import MemoryStorage
 # Bot tokenini kiriting
 BOT_TOKEN = "7609705273:AAFoIawJBTGTFxECwhSjc7vpbgMBcveT_ko"
 
+# Admin guruh ID
+ADMIN_GROUP_ID = -1002783983140
+
 # Logging sozlamalari
 logging.basicConfig(level=logging.INFO)
 
@@ -23,7 +26,7 @@ storage = MemoryStorage()
 dp = Dispatcher(storage=storage)
 
 # JSON fayl nomi
-USER_DATA_FILE = "user_data.json"
+USER_DATA_FILE = "users_data.json"
 
 # JSON fayldan ma'lumotlarni yuklash
 def load_user_data():
@@ -59,7 +62,12 @@ TEXTS = {
         "web_app_button": "🌐 Web App ochish",
         "start_command": "Ro'yxatdan o'tish uchun /start buyrug'ini yuboring.",
         "uzbek": "🇺🇿 O'zbek",
-        "russian": "🇷🇺 Русский"
+        "russian": "🇷🇺 Русский",
+        "forward_question": "Bu xabarni adminga yuborishni xohlaysizmi?",
+        "yes_forward": "✅ Ha, yuborish",
+        "no_forward": "❌ Yo'q, yubormaslik",
+        "message_sent": "✅ Xabaringiz adminga yuborildi!",
+        "message_cancelled": "❌ Xabar yuborilmadi."
     },
     "ru": {
         "choose_language": "Tilni tanlang / Выберите язык:",
@@ -75,7 +83,12 @@ TEXTS = {
         "web_app_button": "🌐 Открыть Web App",
         "start_command": "Для регистрации отправьте команду /start.",
         "uzbek": "🇺🇿 O'zbek",
-        "russian": "🇷🇺 Русский"
+        "russian": "🇷🇺 Русский",
+        "forward_question": "Хотите отправить это сообщение администратору?",
+        "yes_forward": "✅ Да, отправить",
+        "no_forward": "❌ Нет, не отправлять",
+        "message_sent": "✅ Ваше сообщение отправлено администратору!",
+        "message_cancelled": "❌ Сообщение не отправлено."
     }
 }
 
@@ -101,6 +114,17 @@ def get_phone_keyboard(lang):
         ],
         resize_keyboard=True,
         one_time_keyboard=True
+    )
+
+# Forward tugmalari
+def get_forward_keyboard(lang):
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
+            [
+                InlineKeyboardButton(text=TEXTS[lang]["yes_forward"], callback_data="forward_yes"),
+                InlineKeyboardButton(text=TEXTS[lang]["no_forward"], callback_data="forward_no")
+            ]
+        ]
     )
 
 # /start komandasi
@@ -320,12 +344,69 @@ async def phone_handler(message: types.Message, state: FSMContext):
     
     await state.clear()
 
-# Boshqa barcha xabarlar
-@dp.message()
-async def other_messages(message: types.Message):
-    await message.answer(
-        TEXTS["uz"]["start_command"]
-    )
+# Callback handler - Forward qilish/qilmaslik
+@dp.callback_query(lambda c: c.data and c.data.startswith("forward_"))
+async def forward_callback_handler(callback_query: types.CallbackQuery):
+    user_id = str(callback_query.from_user.id)
+    
+    # Foydalanuvchi tilini aniqlash
+    lang = "uz"
+    if user_id in user_data_storage:
+        lang = user_data_storage[user_id].get("language", "uz")
+    
+    try:
+        if callback_query.data == "forward_yes":
+            # Xabarni adminga yuborish
+            original_message = callback_query.message.reply_to_message
+            
+            if original_message:
+                # Foydalanuvchi ma'lumotlarini olish
+                user_info = ""
+                if user_id in user_data_storage:
+                    user_data = user_data_storage[user_id]
+                    user_info = f"📱 Telefon: +{user_data['phone_number']}\n"
+                
+                # Admin guruhga foydalanuvchi ma'lumotlarini yuborish
+                admin_text = f"📩 Yangi xabar:\n\n👤 Foydalanuvchi: {callback_query.from_user.full_name}\n{user_info}🆔 User ID: {callback_query.from_user.id}\n👥 Username: @{callback_query.from_user.username or 'None'}\n\n💬 Xabar quyida forward qilindi:"
+                
+                await bot.send_message(
+                    chat_id=ADMIN_GROUP_ID,
+                    text=admin_text
+                )
+                
+                # Asl xabarni forward qilish
+                await bot.forward_message(
+                    chat_id=ADMIN_GROUP_ID,
+                    from_chat_id=original_message.chat.id,
+                    message_id=original_message.message_id
+                )
+                
+                # Foydalanuvchiga javob
+                await callback_query.message.edit_text(
+                    text=TEXTS[lang]["message_sent"],
+                    reply_markup=None
+                )
+            else:
+                await callback_query.message.edit_text(
+                    text="❌ Xabar topilmadi",
+                    reply_markup=None
+                )
+        
+        elif callback_query.data == "forward_no":
+            # Xabarni yubormaslik
+            await callback_query.message.edit_text(
+                text=TEXTS[lang]["message_cancelled"],
+                reply_markup=None
+            )
+    
+    except Exception as e:
+        logging.error(f"Forward callback error: {e}")
+        await callback_query.message.edit_text(
+            text="❌ Xatolik yuz berdi",
+            reply_markup=None
+        )
+    
+    await callback_query.answer()
 
 # Saqlab olingan ma'lumotlarni ko'rish uchun admin komandasi
 @dp.message(Command("admin"))
@@ -350,6 +431,27 @@ async def admin_handler(message: types.Message):
         admin_text += f"   ✅ Status: {user_info['api_response_status']}\n\n"
     
     await message.answer(admin_text)
+
+# Boshqa barcha xabarlar - Forward qilish uchun
+@dp.message()
+async def other_messages(message: types.Message):
+    user_id = str(message.from_user.id)
+    
+    # Foydalanuvchi ro'yxatdan o'tganmi tekshirish
+    if user_id not in user_data_storage:
+        await message.answer(
+            TEXTS["uz"]["start_command"]
+        )
+        return
+    
+    # Foydalanuvchi tilini aniqlash
+    lang = user_data_storage[user_id].get("language", "uz")
+    
+    # Forward qilish uchun tasdiqlash so'rash
+    await message.reply(
+        TEXTS[lang]["forward_question"],
+        reply_markup=get_forward_keyboard(lang)
+    )
 
 # Botni ishga tushirish
 async def main():

@@ -1,0 +1,62 @@
+{
+  "1719272430": {
+    "user_id": 1719272430,
+    "full_name": "Ibragimov",
+    "phone_number": "15632757597",
+    "username": null,
+    "language": "ru",
+    "registration_time": "2025-07-12T15:54:40.143246",
+    "api_response_status": 200,
+    "api_response_text": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNTYzMjc1NzU5NyIsInJvbGUiOiJ1c2VyIiwidXNlcl9pZCI6InVzZXJfYzE0YWNlYzkiLCJleHAiOjUzNTIzMTQwODB9.EeJWrLzRi302sKu5WcL8DGenD_shFNxJBwiTtk32c2o\",\"role\":\"user\",\"user_id\":\"user_c14acec9\",\"language\":\"ru\"}"
+  },
+  "6105123639": {
+    "user_id": 6105123639,
+    "full_name": "177",
+    "phone_number": "998979431770",
+    "username": null,
+    "language": "uz",
+    "registration_time": "2025-07-12T20:35:40.325358",
+    "api_response_status": 200,
+    "api_response_text": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5OTg5Nzk0MzE3NzAiLCJyb2xlIjoidXNlciIsInVzZXJfaWQiOiJ1c2VyX2MyM2UyYTg3IiwiZXhwIjo1MzUyMzMwOTQwfQ.OtwcDsyih-TJu4TAQTUzPI8FteLWR8rz444Bv4BkICg\",\"role\":\"user\",\"user_id\":\"user_c23e2a87\",\"language\":\"ru\"}"
+  },
+  "7883067064": {
+    "user_id": 7883067064,
+    "full_name": "S",
+    "phone_number": "998951731330",
+    "username": null,
+    "language": "uz",
+    "registration_time": "2025-07-12T22:01:56.832491",
+    "api_response_status": 200,
+    "api_response_text": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5OTg5NTE3MzEzMzAiLCJyb2xlIjoidXNlciIsInVzZXJfaWQiOiJ1c2VyXzA4ODEyYzVjIiwiZXhwIjo1MzUyMzM2MTE2fQ.JrtcdY9PK4H2aXxi6NBRzfnEa0WTXthvaU8RtULBTMk\",\"role\":\"user\",\"user_id\":\"user_08812c5c\",\"language\":\"ru\"}"
+  },
+  "276219804": {
+    "user_id": 276219804,
+    "full_name": "Iskandar Ibragimov",
+    "phone_number": "14164590210",
+    "username": "legal_sam",
+    "language": "uz",
+    "registration_time": "2025-07-13T01:36:09.672394",
+    "api_response_status": 200,
+    "api_response_text": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNDE2NDU5MDIxMCIsInJvbGUiOiJ1c2VyIiwidXNlcl9pZCI6InVzZXJfMjBkNWU1NmQiLCJleHAiOjUzNTIzNDg5Njl9.oaJy9BEU8lMqQJal7zHopL12k0t5a6OUYJYePuuGDLk\",\"role\":\"user\",\"user_id\":\"user_20d5e56d\",\"language\":\"ru\"}"
+  },
+  "1066137436": {
+    "user_id": 1066137436,
+    "full_name": "ㅤㅤㅤㅤㅤㅤ",
+    "phone_number": "998770451117",
+    "username": "uzjoylar_admin",
+    "language": "ru",
+    "registration_time": "2025-07-13T01:36:10.339271",
+    "api_response_status": 400,
+    "api_response_text": "{\"error\":\"Phone number already registered\"}"
+  },
+  "2006082175": {
+    "user_id": 2006082175,
+    "full_name": "Muhammadrasul Axmadov",
+    "phone_number": "998882232394",
+    "username": "Muhammadrasul_02",
+    "language": "uz",
+    "registration_time": "2025-07-13T13:18:31.589595",
+    "api_response_status": 200,
+    "api_response_text": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5OTg4ODIyMzIzOTQiLCJyb2xlIjoidXNlciIsInVzZXJfaWQiOiJ1c2VyXzFlODk2MWM2IiwiZXhwIjo1MzUyMzkxMTExfQ.VAP_akUZElIFE5Vedhd62_A-0G-1iWyDJe1zksfFk_U\",\"role\":\"user\",\"user_id\":\"user_1e8961c6\",\"language\":\"ru\"}"
+  }
+}
